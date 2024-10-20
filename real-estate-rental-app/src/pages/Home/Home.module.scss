@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.cardsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+}
