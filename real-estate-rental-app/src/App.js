@@ -4,7 +4,7 @@ import styles from './App.module.scss';
 import Navbar from './components/Navbar/Navbar.js';
 import Home from './pages/Home/Home.js';
 import Accommodation from './pages/Accommodation.js';
-import About from './pages/About.js';
+import About from './pages/About/About.js';
 import Error404 from './pages/Error404.js';
 
 function App() {

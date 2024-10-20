@@ -1,0 +1,28 @@
+.collapse {
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+    background-color: #FF6060;
+}
+
+.collapseHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+}
+
+.collapseHeader * {
+    margin: 0px;
+}
+
+.collapseContent {
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #F6F6F6;
+    transition: max-height 300ms ease-out, padding-top 300ms ease-out, padding-bottom 300ms ease-out;
+}
