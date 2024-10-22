@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styles from './Accommodation.module.scss';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import Host from '../../components/Host/Host.js'
@@ -8,8 +8,22 @@ import Rating from '../../components/Rating/Rating.js'
 import Collapse from '../../components/Collapse/Collapse.js'
 
 const Accommodation = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const location = useLocation();
-  const { card } = location.state;
+  const [card, setCard] = useState(null);
+
+  useEffect(() => {
+    if (!location.state) {
+      navigate('/error');
+    } else {
+      setCard(location.state.card);
+    }
+  }, [location.state, navigate]);
+
+  if (!card) {
+    return null;
+  }
 
   return (
     <div className={styles.accommodation}>
