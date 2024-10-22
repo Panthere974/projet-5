@@ -1,0 +1,20 @@
+.tags {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    gap: 10px;
+}
+
+.tags li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #FF6060;
+    color: white;
+}
