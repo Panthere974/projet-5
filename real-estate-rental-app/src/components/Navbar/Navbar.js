@@ -4,13 +4,13 @@ import logo from '../../assets/logo_navbar.svg';
 
 const Navbar = () => {
   return (
-    <nav className={styles.navbar}>
+    <header className={styles.header}>
       <img src={logo} alt="Logo"/>
-      <ul className={styles.navLinks}>
-        <li><NavLink to="/" className={({ isActive }) => (isActive ? styles.active : 'undefined')}>Accueil</NavLink></li>
-        <li><NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : 'undefined')}>A Propos</NavLink></li>
-      </ul>
-    </nav>
+      <nav className={styles.navLinks}>
+        <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : 'undefined')}>Accueil</NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : 'undefined')}>A Propos</NavLink>
+      </nav>
+    </header>
   );
 };
 
