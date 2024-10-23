@@ -3,16 +3,30 @@
     flex-direction: column;
     width: 100%;
     gap: 50px;
+
+    .cardsSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 40px;
+        gap: 40px;
+        border-radius: 25px;
+        background-color: #F6F6F6;
+    }
 }
 
-.cardsSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 40px;
-    gap: 40px;
-    border-radius: 25px;
-    background-color: #F6F6F6;
-}
+@media (max-width: 768px) {
+    .home {
+        gap: 20px;
+        
+        .cardsSection {
+            flex-direction: column;
+            padding: 0;
+            gap: 20px;
+            border-radius: 25px;
+            background-color: transparent;
+        }
+    }
+  }

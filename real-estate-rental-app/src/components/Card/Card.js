@@ -1,11 +1,12 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
-const Card = ({ title, image, onClick }) => {
+const Card = ({ id, title, cover}) => {
   return (
-    <article className={styles.card} style={{backgroundImage: `url(${image})`}} onClick={onClick}>
-      <h2 className={styles.cardTitle}>{title}</h2>
-    </article>
+    <Link to={`/accommodation/${id}`} className={styles.card} style={{backgroundImage: `url(${cover})`}}>
+      <div className={styles.overlay}/>
+      <h2>{title}</h2>
+    </Link>
   );
 };
 

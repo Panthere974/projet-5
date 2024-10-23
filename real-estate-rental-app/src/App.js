@@ -1,7 +1,6 @@
-import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
-import Navbar from './components/Navbar/Navbar.js';
+import Navbar from './components/Header/Header.js';
 import Home from './pages/Home/Home.js';
 import Accommodation from './pages/Accomodation/Accommodation.js';
 import About from './pages/About/About.js';

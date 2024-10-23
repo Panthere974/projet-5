@@ -1,12 +1,14 @@
 import styles from './Banner.module.scss';
 
-const banner = ({title, backgroundImage}) => {
+const banner = ({type}) => {
     return (
-        <section className={styles.banner} style={{backgroundImage: `url(${backgroundImage})`}}>
-            <h1 className={styles.title}>{title}</h1>
+        <section className={`${styles.banner} ${styles[`banner--${type}`]}`}>
+            <div className={styles.overlay}/>
+            {type === 'home' && 
+                <h1>Chez vous, <br className={styles.break}/>partout et ailleurs</h1>
+            }
         </section>
     );
 };
   
 export default banner;
-  
