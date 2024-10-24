@@ -15,7 +15,7 @@ const Collapse = ({ title, children }) => {
                 <i className={isOpen ? 'fa-solid fa-chevron-down fa-2xl' : 'fa-solid fa-chevron-up fa-2xl'}></i>
             </div>
             <div className={styles.collapseContent} 
-                style={{ maxHeight: isOpen ? '500px' : '0', paddingTop: isOpen ? '20px' : '0', paddingBottom: isOpen ? '20px' : '0' }}
+                style={{ maxHeight: isOpen ? '500px' : '0', paddingTop: isOpen ? '10px' : '0', paddingBottom: isOpen ? '10px' : '0' }}
             >
                 {children}
             </div>

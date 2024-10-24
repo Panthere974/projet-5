@@ -6,7 +6,7 @@ const Error404 = () => {
   return (
     <div className={styles.error404}>
       <img src={message404} alt="404 Not Found"/>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <p>Oups! La page que <br className={styles.break}/>vous demandez n'existe pas.</p>
       <NavLink to="/">Retourner sur la page d’accueil</NavLink>
     </div>
   );
