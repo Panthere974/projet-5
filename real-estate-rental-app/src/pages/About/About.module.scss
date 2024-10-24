@@ -4,4 +4,22 @@
     align-items: center;
     width: 100%;
     gap: 50px;
+
+    .collapses {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        gap: 20px;
+    
+        .collapses {
+            width: 100%;
+            gap: 20px;
+        }
+    }
 }
