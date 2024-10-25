@@ -21,5 +21,16 @@
 }
 
 @media (max-width: 768px) {
+    .footer {
+        justify-content: center;
+        gap: 10px;
     
+        span {
+            font-size: 12px;
+    
+            .break {
+                display: block;
+            }
+        }
+    }
 }
