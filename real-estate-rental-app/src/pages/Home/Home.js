@@ -11,7 +11,7 @@ const Home = () => {
       <Banner type='home'></Banner>
       <section className={styles.cardsSection}>
         {accomodations.map((accommodation) => (
-            <Card key={accommodation.id} title={accommodation.title} cover={accommodation.cover}/>
+            <Card key={accommodation.id} id={accommodation.id} title={accommodation.title} cover={accommodation.cover}/>
         ))}
       </section>
     </div>

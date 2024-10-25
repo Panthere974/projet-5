@@ -24,7 +24,6 @@
     .collapseContent {
         display: flex;
         flex-direction: column;
-        justify-content: start;
         max-height: 0;
         overflow: hidden;
         border-radius: 5px;
@@ -35,6 +34,7 @@
 
         * {
             margin: 0;
+            padding: 0;
         }
 
         li {

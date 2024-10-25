@@ -2,57 +2,55 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styles from './Accommodation.module.scss';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
-import Host from '../../components/Host/Host.js'
-import Tags from '../../components/Tags/Tags.js'
-import Rating from '../../components/Rating/Rating.js'
-import Collapse from '../../components/Collapse/Collapse.js'
+import Host from '../../components/Host/Host.js';
+import Tags from '../../components/Tags/Tags.js';
+import Rating from '../../components/Rating/Rating.js';
+import Collapse from '../../components/Collapse/Collapse.js';
+import accomodations from '../../logements.json';
 
 const Accommodation = () => {
   const { id } = useParams();
+  const accomodation = accomodations.find(accomodation => accomodation.id === id);
   const navigate = useNavigate();
-  const location = useLocation();
-  const [card, setCard] = useState(null);
 
   useEffect(() => {
-    if (!location.state) {
+    if (!accomodation) {
       navigate('/error');
-    } else {
-      setCard(location.state.card);
     }
-  }, [location.state, navigate]);
+  }, [accomodation, navigate]);
 
-  if (!card) {
+  if (!accomodation) {
     return null;
   }
 
   return (
     <div className={styles.accommodation}>
-      <Slideshow pictures={card.pictures}></Slideshow>
-      <section className={styles.details}>
-        <div className={styles.detailsContent}>
-          <div className={styles.titleAndLocation}>
+      <Slideshow pictures={accomodation.pictures}></Slideshow>
+      <section className={styles.informations}>
+        <div className={`${styles.informationsContent} ${styles['informationsContent--left']}`}>
+          <div>
             <h1>
-              {card.title}
+              {accomodation.title}
             </h1>
-            <span>{card.location}</span>
+            <span>{accomodation.location}</span>
           </div>
-          <Host host={card.host}></Host>
+          <Tags className={styles.tags} tags={accomodation.tags}></Tags>
         </div>
-        <div className={styles.detailsContent}>
-          <Tags tags={card.tags}></Tags>
-          <Rating rating={card.rating}></Rating>
-        </div>
-        <div className={styles.detailsContent}>
-          <Collapse title='Description' children={card.description}></Collapse>
-          <Collapse title='Équipements' children={
-            <ul>
-              {card.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          } />
+        <div className={`${styles.informationsContent} ${styles['informationsContent--right']}`}>
+          <Host host={accomodation.host}></Host>
+          <Rating rating={accomodation.rating}></Rating>
         </div>
       </section>
+      <section className={styles.details}>
+        <Collapse title='Description' children={accomodation.description}></Collapse>
+        <Collapse title='Équipements' children={
+          <ul>
+            {accomodation.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        }/>
+        </section>
     </div>
   );
 };

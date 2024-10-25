@@ -3,18 +3,30 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+
+    span {
+        color: #FF6060;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    img {
+        width: 64px;
+        height: 64px;
+        border-radius: 90px;
+        background-color: #C4C4C4;
+    }
 }
 
-.host span {
-    color: #FF6060;
-    font-size: 18px;
-    text-align: right;
-}
+@media (max-width: 768px) {
+    .host {
+        span {
+            font-size: 12px;
+        }
 
-
-.host img {
-    width: 64px;
-    height: 64px;
-    border-radius: 90px;
-    background-color: #C4C4C4;
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
 }

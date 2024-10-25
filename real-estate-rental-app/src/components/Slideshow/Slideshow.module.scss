@@ -14,3 +14,12 @@
     font-size: 40px;
     box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+    .slideshow {
+        height: 255px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+}

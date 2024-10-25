@@ -1,20 +1,33 @@
 .tags {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
     gap: 10px;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: #FF6060;
+        color: white;
+        white-space: nowrap;
+    }
 }
 
-.tags li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    background-color: #FF6060;
-    color: white;
+@media (max-width: 768px) {
+    .tags {
+        li {
+            height: 18px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 14px;
+        }
+    }
 }
