@@ -6,7 +6,7 @@ const Host = ({host}) => {
         <span>
             {host.name.split(" ")[0]}<br/>{host.name.split(" ")[1]}
         </span>
-        <img src={host.picture}></img>
+        <img src={host.picture} alt={host.name}></img>
     </div>
   );
 };
