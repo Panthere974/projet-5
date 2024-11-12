@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Accommodation.module.scss';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import Host from '../../components/Host/Host.js';

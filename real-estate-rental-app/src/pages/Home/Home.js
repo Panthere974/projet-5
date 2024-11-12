@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Home.module.scss';
 import Banner from '../../components/Banner/Banner.js';
 import Card from '../../components/Card/Card.js';
